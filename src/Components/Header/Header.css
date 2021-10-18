@@ -1,0 +1,10 @@
+span {
+  font-family: "Scheherazade New", serif;
+  font-size: xx-large;
+}
+
+.Header {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: center;
+}

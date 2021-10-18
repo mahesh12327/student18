@@ -1,0 +1,13 @@
+.Welcome {
+  margin-top: 70px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1.15fr 1fr;
+  width: 90%;
+  margin: auto;
+}
+
+.introduction {
+  padding: 100px 40px 40px 40px;
+  color: rgb(197, 197, 197);
+}
