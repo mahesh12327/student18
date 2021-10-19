@@ -9,5 +9,16 @@
 
 .App {
   height: 100vh;
-  background: #322542;
+  background: linear-gradient(to bottom, #231a2e, #322542);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: rgb(207, 207, 207);
+  background: rgb(106, 69, 167);
+}
+
+::selection {
+  color: rgb(209, 209, 209);
+  background: rgb(106, 69, 167);
 }

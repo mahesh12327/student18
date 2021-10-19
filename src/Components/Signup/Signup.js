@@ -37,9 +37,9 @@ const Signup = (props) => {
     <div className="Signup container">
       <form className="signupForm" onSubmit={submitHandler}>
         {signupSuccess && (
-          <p className="signup-success">Signup Successfull !!</p>
+          <p className="signup-success">Registered Successfully !!</p>
         )}
-        <h2 className="signup-text">Signup</h2>
+        <h2 className="signup-text">Register</h2>
         <div className="row item">
           <div className="col-sm-12">
             <div class="input-group mb-2 mr-sm-2">
@@ -103,10 +103,10 @@ const Signup = (props) => {
         </div>
         <div className="mt-3 last-form-sec">
           <button type="submit" className="btn btn-primary">
-            Signup
+            Register
           </button>
           <p className="didnt-signup">
-            Already have Account?
+            Already Registered?
             <a
               className="nav-link"
               aria-current="page"

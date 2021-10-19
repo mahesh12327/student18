@@ -20,13 +20,13 @@ const Welcome = (props) => {
       <div className="introduction">
         <h1 className="display-4">Hello, world!</h1>
         <p className="lead">
-          This is a simple Student app, where we can perform CURD operations on
-          Student Registrations.
+          This is a simple Student Management app, where we can perform CURD
+          operations on Student Registrations.
         </p>
         <hr className="my-4"></hr>
         <p>
-          Signup for new Registrations, If Registered Login to perform
-          operations in the Student app.
+          Register for new User, If Registered Login to perform operations in
+          the Student Management app.
         </p>
       </div>
       <div>
@@ -50,7 +50,3 @@ const Welcome = (props) => {
 };
 
 export default Welcome;
-
-// login={props.login}
-// isLogin={props.isLogin}
-// logout={props.logout}

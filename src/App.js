@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Welcome from "./Components/Welcome/Welcome";
 
@@ -63,12 +64,6 @@ function App() {
   };
   return (
     <div className="App text-white">
-      {/* <Navigation
-        signup={signupHandler}
-        login={loginHandler}
-        isLogin={loginSuccess}
-        logout={logoutHandler}
-      ></Navigation> */}
       <Header></Header>
       {!loginSuccess && (
         <Welcome
@@ -80,6 +75,7 @@ function App() {
         ></Welcome>
       )}
       {loginSuccess && <Dashboard logout={logoutHandler}></Dashboard>}
+      <Footer></Footer>
     </div>
   );
 }

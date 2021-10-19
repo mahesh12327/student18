@@ -1,11 +1,19 @@
 import { useEffect } from "react";
 import { useContext } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, NavLink, Route } from "react-router-dom";
 import AddStudent from "../AddStudent/AddStudent";
+import DeleteStudent from "../DeleteStudent/DeleteStudent";
+import EditStudent from "../EditStudent/EditStudent";
 import studentContext from "../Store/Context";
 
 import ViewStudent from "../ViewStudent/ViewStudent";
 import "./Dashboard.css";
+
+import { HiOutlineUserAdd } from "react-icons/hi";
+import { MdOutlineViewList } from "react-icons/md";
+import { AiOutlineEdit } from "react-icons/ai";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { MdLogout } from "react-icons/md";
 let initial = true;
 const Dashboard = (props) => {
   const ctx = useContext(studentContext);
@@ -37,27 +45,43 @@ const Dashboard = (props) => {
   };
   return (
     <div className="Dashboard">
-      <div className="">
+      <div className="sidenav">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <Link class="nav-link active" to="/addStudents">
-              Add Student
-            </Link>
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/addStudents"
+            >
+              <HiOutlineUserAdd size={20} /> &nbsp; Add Student
+            </NavLink>
           </li>
           <li class="nav-item">
-            <Link class="nav-link" to="/viewStudents">
-              View Students
-            </Link>
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/viewStudents"
+            >
+              <MdOutlineViewList size={20} /> &nbsp; View Students
+            </NavLink>
           </li>
           <li class="nav-item">
-            <Link class="nav-link" to="/editStudents">
-              Edit Students
-            </Link>
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/editStudents"
+            >
+              <AiOutlineEdit size={20} /> &nbsp; Edit Students
+            </NavLink>
           </li>
           <li class="nav-item">
-            <Link class="nav-link " to="/deleteStudents">
-              Delete Students
-            </Link>
+            <NavLink
+              activeClassName="active"
+              className="nav-link"
+              to="/deleteStudents"
+            >
+              <RiDeleteBin6Line size={20} /> &nbsp;Delete Students
+            </NavLink>
           </li>
           <li
             class="nav-item"
@@ -67,7 +91,7 @@ const Dashboard = (props) => {
             }}
           >
             <Link class="nav-link " to="/">
-              Logout
+              <MdLogout size={20} /> &nbsp; Logout
             </Link>
           </li>
         </ul>
@@ -83,10 +107,10 @@ const Dashboard = (props) => {
           <ViewStudent></ViewStudent>
         </Route>
         <Route path="/editStudents">
-          <ViewStudent></ViewStudent>
+          <EditStudent></EditStudent>
         </Route>
         <Route path="/deleteStudents">
-          <ViewStudent></ViewStudent>
+          <DeleteStudent></DeleteStudent>
         </Route>
       </div>
     </div>

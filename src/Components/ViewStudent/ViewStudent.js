@@ -21,8 +21,6 @@ const ViewStudent = () => {
             <th scope="col">Rollno</th>
             <th scope="col">Class</th>
             <th scope="col">Address</th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -77,59 +75,6 @@ const ViewStudent = () => {
                 ) : (
                   <td>{student.address}</td>
                 )}
-                {isEdit && student.id === id ? (
-                  <td>
-                    <button
-                      type="button"
-                      className="btn btn-success"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        const studentDetails = {
-                          id,
-                          name,
-                          rollNo,
-                          studentClass,
-                          address,
-                        };
-                        ctx.editStudent(studentDetails);
-                        setIsEdit(false);
-                      }}
-                    >
-                      Update
-                    </button>
-                  </td>
-                ) : (
-                  <td>
-                    <button
-                      type="button"
-                      className="btn btn-warning"
-                      onClick={(event) => {
-                        event.preventDefault();
-                        setId(student.id);
-                        setName(student.name);
-                        setRollNo(student.rollNo);
-                        setStudentClass(student.studentClass);
-                        setAddress(student.address);
-                        setIsEdit(true);
-                        // setEditId(student.id);
-                      }}
-                    >
-                      Edit
-                    </button>
-                  </td>
-                )}
-                <td>
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={(event) => {
-                      event.preventDefault();
-                      ctx.deleteStudent(student.id);
-                    }}
-                  >
-                    Delete
-                  </button>
-                </td>
               </tr>
             );
           })}

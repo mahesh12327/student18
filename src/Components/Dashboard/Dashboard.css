@@ -3,6 +3,7 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr;
+  margin-bottom: 18px;
 }
 
 .link a {
@@ -30,4 +31,46 @@
   background-color: #d8d8d8;
   padding: 50px;
   border-radius: 40px;
+}
+
+.sidenav {
+  margin: 0px 15px;
+}
+
+.sidenav ul li {
+  margin-bottom: 5px;
+}
+
+.sidenav ul li a {
+  color: rgb(202, 202, 202);
+}
+
+.sidenav ul li:hover a {
+  background-color: rgba(111, 0, 255, 0.411);
+  border-radius: 10px;
+  color: rgb(202, 202, 202);
+}
+
+.active {
+  background-color: rgb(111, 0, 255);
+  border-radius: 10px;
+  color: rgb(202, 202, 202) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidenav {
+    display: none;
+  }
+  .Dashboard {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .matter {
+    margin-left: 15px !important;
+    padding: 15px;
+    width: 120%;
+    margin-bottom: 130px;
+  }
 }

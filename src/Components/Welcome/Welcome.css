@@ -5,9 +5,20 @@
   grid-template-columns: 1.15fr 1fr;
   width: 90%;
   margin: auto;
+  margin-bottom: 23px;
 }
 
 .introduction {
   padding: 100px 40px 40px 40px;
   color: rgb(197, 197, 197);
+}
+
+@media only screen and (max-width: 600px) {
+  .Welcome {
+    display: block;
+  }
+
+  .introduction {
+    display: none;
+  }
 }

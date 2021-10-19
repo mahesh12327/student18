@@ -32,9 +32,7 @@ const AddStudent = () => {
   return (
     <div className="text-dark AddStudent">
       {registrationSuccess && (
-        <p className="success-registration text-center">
-          Registration Successfull !!
-        </p>
+        <p className="success-registration">Registration Successfull !!</p>
       )}
       <h2 className="text-center">Student Registration</h2>
       <form onSubmit={submitHandler}>
