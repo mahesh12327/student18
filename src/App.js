@@ -3,12 +3,14 @@ import "./App.css";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
+import MobileNav from "./Components/MobileNav/MobileNav";
 import Welcome from "./Components/Welcome/Welcome";
 
 function App() {
   const [studentSignupDetails, setStudentSignupDetails] = useState([]);
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
 
   useEffect(() => {
     const getRequest = async () => {
@@ -62,9 +64,15 @@ function App() {
   const notificationHandler = () => {
     setError(false);
   };
+  const menuHandler = () => {
+    setIsMenu((prevState) => !prevState);
+  };
   return (
     <div className="App text-white">
-      <Header></Header>
+      {isMenu && (
+        <MobileNav close={menuHandler} logout={logoutHandler}></MobileNav>
+      )}
+      <Header menu={menuHandler} isLogged={loginSuccess}></Header>
       {!loginSuccess && (
         <Welcome
           isLogin={loginSuccess}

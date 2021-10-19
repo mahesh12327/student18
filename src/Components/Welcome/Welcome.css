@@ -6,6 +6,7 @@
   width: 90%;
   margin: auto;
   margin-bottom: 23px;
+  height: 80vh;
 }
 
 .introduction {
@@ -15,7 +16,9 @@
 
 @media only screen and (max-width: 600px) {
   .Welcome {
+    margin-bottom: 120px;
     display: block;
+    height: auto;
   }
 
   .introduction {

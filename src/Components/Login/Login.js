@@ -38,15 +38,15 @@ const Login = (props) => {
         <h2 className="login-text">Login</h2>
         <div className="row item">
           <div className="col-sm-12">
-            <div class="input-group mb-2 mr-sm-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
+            <div className="input-group mb-2 mr-sm-2">
+              <div className="input-group-prepend">
+                <div className="input-group-text">
                   <ImUser size={30} />
                 </div>
               </div>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 value={loginUserName}
                 placeholder="Username"
                 onChange={(event) => {
@@ -65,15 +65,15 @@ const Login = (props) => {
         </div>
         <div className="row item">
           <div className="col-sm-12">
-            <div class="input-group mb-2 mr-sm-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
+            <div className="input-group mb-2 mr-sm-2">
+              <div className="input-group-prepend">
+                <div className="input-group-text">
                   <RiLockPasswordFill size={30} />
                 </div>
               </div>
               <input
                 type="password"
-                class="form-control"
+                className="form-control"
                 value={loginPassword}
                 placeholder="Password"
                 onChange={(event) => {
@@ -111,7 +111,7 @@ const Login = (props) => {
               href="/"
               onClick={signupHandler}
             >
-              Signup
+              Register
             </a>
           </p>
         </div>

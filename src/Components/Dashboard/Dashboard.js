@@ -46,8 +46,8 @@ const Dashboard = (props) => {
   return (
     <div className="Dashboard">
       <div className="sidenav">
-        <ul class="nav flex-column">
-          <li class="nav-item">
+        <ul className="nav flex-column">
+          <li className="nav-item">
             <NavLink
               activeClassName="active"
               className="nav-link"
@@ -56,7 +56,7 @@ const Dashboard = (props) => {
               <HiOutlineUserAdd size={20} /> &nbsp; Add Student
             </NavLink>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink
               activeClassName="active"
               className="nav-link"
@@ -65,7 +65,7 @@ const Dashboard = (props) => {
               <MdOutlineViewList size={20} /> &nbsp; View Students
             </NavLink>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink
               activeClassName="active"
               className="nav-link"
@@ -74,7 +74,7 @@ const Dashboard = (props) => {
               <AiOutlineEdit size={20} /> &nbsp; Edit Students
             </NavLink>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
             <NavLink
               activeClassName="active"
               className="nav-link"
@@ -84,13 +84,13 @@ const Dashboard = (props) => {
             </NavLink>
           </li>
           <li
-            class="nav-item"
+            className="nav-item"
             onClick={(event) => {
               event.preventDefault();
               props.logout();
             }}
           >
-            <Link class="nav-link " to="/">
+            <Link className="nav-link " to="/">
               <MdLogout size={20} /> &nbsp; Logout
             </Link>
           </li>

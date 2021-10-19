@@ -4,6 +4,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 4fr;
   margin-bottom: 18px;
+  height: 80vh;
 }
 
 .link a {
@@ -62,15 +63,15 @@
     display: none;
   }
   .Dashboard {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 16px;
+    height: 90vh;
   }
   .matter {
     margin-left: 15px !important;
     padding: 15px;
     width: 120%;
-    margin-bottom: 130px;
   }
 }

@@ -102,7 +102,7 @@ const AddStudent = () => {
           </div>
         </div>
         <div className="text-center">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="add-btn btn btn-primary">
             Add Details
           </button>
         </div>
